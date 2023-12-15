@@ -1,0 +1,22 @@
+.div_projetos{
+    width: 100%;
+    display: flex;
+    padding: 2em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_projeto{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.width_adjust{
+    width: 75%;
+}
+
+.width_adjust #proj_div{
+    justify-content: center;
+}

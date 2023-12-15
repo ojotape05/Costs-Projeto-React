@@ -1,0 +1,10 @@
+.popUp_background{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(204, 204, 204, 0.322);
+}
+
+.popUp{
+    background-color: white;
+}

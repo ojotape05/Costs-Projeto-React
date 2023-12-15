@@ -1,0 +1,23 @@
+.footer{
+    background-color: #222;
+    color: white;
+    padding: 3em;
+    text-align: center;
+}
+
+.list{
+    display: flex;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    padding: 5px
+}
+
+.list li{
+    margin: 0 1em;
+}
+
+.list li:hover{
+    color: rgb(255, 166, 0);
+    cursor: pointer;
+}

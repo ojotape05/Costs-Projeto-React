@@ -1,0 +1,32 @@
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background-color: #222;
+    color: white;
+    height: 8.5%;
+}
+
+.header ul{
+    list-style: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.header h3{
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+}
+
+.header ul li a{
+    font-size: 0.9em;
+    color: white;
+    text-decoration: none;
+}
+
+.header ul li a:hover{
+    color: rgb(255, 166, 0);
+}

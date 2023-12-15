@@ -1,0 +1,80 @@
+{
+  "projetos": [
+    {
+      "nomeProjeto": "Meu segundo projeto",
+      "orcamentoProjeto": 8000,
+      "categoria": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "nomeProjeto": "Financilab",
+      "orcamentoProjeto": "50000",
+      "categoria": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
+    },
+    {
+      "nomeProjeto": "Appsheets",
+      "categoria": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "orcamentoProjeto": 0,
+      "cost": 0,
+      "services": [
+        {
+          "name": "Design front-end",
+          "cost": "0",
+          "desc": "Ajeitar as informações do front-end",
+          "id": "f4ab01ee-84c0-4b60-a469-9ea6a7ca98bb"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "nomeProjeto": "teste",
+      "orcamentoProjeto": 1000,
+      "categoria": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [
+        {
+          "name": "reunião mensal",
+          "cost": "0",
+          "desc": "dbfgsdgbsdg",
+          "id": "d9c62939-64b8-4abb-bee9-d1a7db04f8b5"
+        }
+      ],
+      "id": 6
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "name": "Infra"
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "Design"
+    },
+    {
+      "id": 4,
+      "name": "Planejamento"
+    }
+  ]
+}
