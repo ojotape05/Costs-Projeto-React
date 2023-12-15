@@ -12,7 +12,7 @@ function ProjetoForm({handleSubmit, projetoData, btnText}){
     const [projeto, setProjeto] = useState(projetoData || {})
 
     useEffect(() => {
-        fetch("http://32.30.14.74:5000/categorias", {
+        fetch("http://localhost:5000/categorias", {
             method: 'GET',
             header: {
                 'Content-Type': 'application/json'

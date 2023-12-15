@@ -30,7 +30,7 @@ function Projeto(){
 
     useEffect(() => {
         setTimeout( () =>{
-            fetch(`http://32.30.14.74:5000/projetos/${id}`, {
+            fetch(`http://localhost:5000/projetos/${id}`, {
                 method: 'GET',
                 headers: {
                     'Content-type': 'application/json'
@@ -69,7 +69,7 @@ function Projeto(){
             setMessage('Orçamento menor que custas')
             setType('error')
         }else{
-            fetch(`http://32.30.14.74:5000/projetos/${projeto.id}`,{
+            fetch(`http://localhost:5000/projetos/${projeto.id}`,{
                 method: 'PATCH',
                 headers: {
                     'Content-type': 'application/json'
@@ -98,7 +98,7 @@ function Projeto(){
             projetoTemp.services.push(service)
             projetoTemp.orcamentoProjeto = parseFloat(projetoTemp.orcamentoProjeto) - parseFloat(service.cost)
 
-            fetch(`http://32.30.14.74:5000/projetos/${id}`, {
+            fetch(`http://localhost:5000/projetos/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-type': 'application/json'
@@ -144,7 +144,7 @@ function Projeto(){
                 }
             })
 
-            fetch(`http://32.30.14.74:5000/projetos/${id}`, {
+            fetch(`http://localhost:5000/projetos/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-type': 'application/json'
@@ -182,7 +182,7 @@ function Projeto(){
         projetoTemp.orcamentoProjeto += parseFloat(serviceTemp.cost)
         projetoTemp.cost = parseFloat(projeto.cost) - parseFloat(serviceTemp.cost)
 
-        fetch(`http://32.30.14.74:5000/projetos/${projeto.id}`, {
+        fetch(`http://localhost:5000/projetos/${projeto.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-type': 'application/json'

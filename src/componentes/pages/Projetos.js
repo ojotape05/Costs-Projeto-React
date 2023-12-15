@@ -24,7 +24,7 @@ function Projetos(){
 
     // Handle para remover projeto
     function removeProjeto(id){
-        fetch(`http://32.30.14.74:5000/projetos/${id}`,{
+        fetch(`http://localhost:5000/projetos/${id}`,{
             method: 'DELETE',
             headers: {
                 'Content-type': 'application/json'
@@ -40,7 +40,7 @@ function Projetos(){
     // Renderiza os projetos
     useEffect(() => {
         setTimeout( () => {
-            fetch(`http://32.30.14.74:5000/projetos`,{
+            fetch(`http://localhost:5000/projetos`,{
                 method: 'GET',
                 header:{
                     'Content-Type': 'application/json'
