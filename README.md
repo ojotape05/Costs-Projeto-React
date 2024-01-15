@@ -1,72 +1,33 @@
+# Projeto COSTS
+Este é um projeto em REACT desenvolvido durante uma bateria de estudos que fiz para me aprofundar na ferramenta. <br>
 
+A ideia foi fazer um <b>CRUD</b> simples pegando todos os escopos estudados, como Hooks, Icons, Componentes, Lazy Load, Mensagens de retorno e assim por diante.<br>
+Para isso, fiz um gestor de projetos capaz de receber um título, um orçamento, uma categoria e alguns serviços (com nome, custo e descrição). Ele conta com tratativas de inserção e retorno de dados, além de regras de negócios simples para funcionamento coeso do projeto.
 
-# Getting Started with Create React App
+## Tela - Home
+A <b>Tela Home</b> apresenta o projeto no seu body, faz uma chamada pra uso e já conta com alguns componentes de suporte (Container, Button), bem como os componentes Header e Footer.<br><br>
+Usei a <b>componentização</b> nos <b><i>buttons, container, header e footer</i></b> por serem elementos bem genéricos na minha aplicação e que se repetem em todas as telas.<br>
+No caso dos buttons, utilizei os <b>parâmetros</b> para passar o link e o texto que compõem. No container, fiz alguns estilos padronizados no css do componente e que pode ser acessado passando um parâmetro de estilo ao container (melhor visualizado no código).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tela - Criar Projeto
+A <b>Tela de criar projeto</b> contém o que chamei de "formulário de projeto".<br><br>
+Fiz a componentização desse formulário pois temos a possibilidade de <b>fazer a edição</b> de projetos criados posteriormente utilizando exatamente a mesma estrutura, mudando somente o preenchimento dos campos de cadastro.<br>
+Já contém aqui as primeiras validações e comunicação com o backend. O formulário contém o campo select que é dinâmicamente preenchido atráves da consulta ao banco de dados. Para isso, foi utilizado o <b>Hook useEffect</b> para consultar os dados e <b>Hook useState</b> para armazenar temporariamente essa informação e preencher no Select como parâmetro.<br>
 
-## Available Scripts
+Uma vez que todos os campos foram devidamente preenchidos, vamos para a próxima tela.
 
-In the project directory, you can run:
+## Tela - Projetos
+A <b>Tela de Projetos</b> contém todos os projetos criados na aplicação.<br><br>
+Essa tela propõe ao usuário uma visão geral de todos os projetos, contendo alguns detalhes de cada um deles e dois botões interativos para <b>edição e exclusão</b> do projeto.<br>
+Enquanto o botão de <b>edição</b> abre uma página a ser abordada logo abaixo na tela "Projeto", o botão de <b>excluir</b> apenas exclui o registro no banco de dados e retorna uma mensagem ao usuário. Também há de se destacar que na utilização do projeto ou na leitura do código, pode-se ver um tempo de 1,5s para carregamento dos projetos pós requisição ao backend, fiz isso para testar o <b>loading</b>.<br>
+As <b>Mensagens de Retorno</b> são customizadas a partir das respostas recebidas.
 
-### `npm start`
+## Tela - Projeto
+A <b>Tela de Projeto</b> aborda os projetos de forma única e mais detalhada, dando espaço para a customização dos <b>serviços</b> que o compõe.<br><br>
+Nessa tela, além de enxergarmos com mais detalhes o projeto selecionado, podemos fazer a edição do projeto usando o componente "formulário de projeto" preenchido (conforme mencionado anteriormente) e também trabalhar nos serviços.<br>
+Os serviços são mostrados numa divisória a parte em cards, podem ser editados e excluídos seguindo praticamente a mesma mecânica da tela "Projetos".
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tela - Contato
+A <b>Tela de Contato</b> é uma tela pra disponibilizar os meios de contato comigo.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<i>obs.: Como é um projeto totalmente para portfólio, nosso "banco de dados" será um arquivo .json</i>
