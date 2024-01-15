@@ -4,8 +4,8 @@
       "nomeProjeto": "Meu segundo projeto",
       "orcamentoProjeto": 8000,
       "categoria": {
-        "id": "1",
-        "name": "Infra"
+        "id": "3",
+        "name": "Design"
       },
       "cost": 0,
       "services": [],
@@ -15,8 +15,8 @@
       "nomeProjeto": "Financilab",
       "orcamentoProjeto": "50000",
       "categoria": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "4",
+        "name": "Planejamento"
       },
       "cost": 0,
       "services": [],
@@ -25,8 +25,8 @@
     {
       "nomeProjeto": "Appsheets",
       "categoria": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "1",
+        "name": "Infra"
       },
       "orcamentoProjeto": 0,
       "cost": 0,
@@ -41,19 +41,19 @@
       "id": 5
     },
     {
-      "nomeProjeto": "teste",
-      "orcamentoProjeto": 1000,
+      "nomeProjeto": "Teste",
+      "orcamentoProjeto": 500,
       "categoria": {
-        "id": "4",
-        "name": "Planejamento"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
-      "cost": 0,
+      "cost": 500,
       "services": [
         {
-          "name": "reunião mensal",
-          "cost": "0",
-          "desc": "dbfgsdgbsdg",
-          "id": "d9c62939-64b8-4abb-bee9-d1a7db04f8b5"
+          "name": "Serviço 1",
+          "cost": "500",
+          "desc": "Esse é o primeiro serviço",
+          "id": "17873fca-f93b-478e-8761-0b53487e1a08"
         }
       ],
       "id": 6

@@ -13,6 +13,7 @@ function Projetos(){
 
     const navigate = useNavigate()
     const [projetos, setProjetos] = useState([])
+    const [loading, setLoading] = useState(false)
     const [justifyContent, setJustifyContent] = useState('start')
      
     // Coleta a messagem enviada (caso exista)
@@ -39,6 +40,7 @@ function Projetos(){
 
     // Renderiza os projetos
     useEffect(() => {
+        setLoading(true)
         setTimeout( () => {
             fetch(`http://localhost:5000/projetos`,{
                 method: 'GET',
@@ -49,6 +51,7 @@ function Projetos(){
             .then( resp => resp.json())
             .then( data => {
                 setProjetos(data)
+                setLoading(false)
             })
             .catch(err => console.log(err))
         }, 1500)
@@ -80,20 +83,24 @@ function Projetos(){
                 }
 
                 <Container customClass={`${justifyContent}`}>
-                {projetos.length > 0 ?
-                    projetos.map((projeto) => (
-                        <ProjetoCard
-                            id={projeto.id}
-                            nome={projeto.nomeProjeto}
-                            valor={projeto.orcamentoProjeto}
-                            categoria={projeto.categoria.name}
-                            key={projeto.id}
-                            handleRemove={removeProjeto}
-                        />
-                    ))
-                        :
-                    <Loading />
+                {loading ?
+                        <Loading />
+                            :
+                        projetos.length > 0 ?
+                            projetos.map((projeto) => (
+                                <ProjetoCard
+                                    id={projeto.id}
+                                    nome={projeto.nomeProjeto}
+                                    valor={projeto.orcamentoProjeto}
+                                    categoria={projeto.categoria.name}
+                                    key={projeto.id}
+                                    handleRemove={removeProjeto}
+                                />
+                            ))
+                            :
+                            "Não há projetos"
                 }
+                
                 </Container>
                 
                     
