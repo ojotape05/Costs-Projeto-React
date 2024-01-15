@@ -4,6 +4,8 @@ Este é um projeto em REACT desenvolvido durante uma bateria de estudos que fiz 
 A ideia foi fazer um <b>CRUD</b> simples pegando todos os escopos estudados, como Hooks, Icons, Componentes, Lazy Load, Mensagens de retorno e assim por diante.<br>
 Para isso, fiz um gestor de projetos capaz de receber um título, um orçamento, uma categoria e alguns serviços (com nome, custo e descrição). Ele conta com tratativas de inserção e retorno de dados, além de regras de negócios simples para funcionamento coeso do projeto.
 
+<i><b>obs.:</b> Como é um projeto totalmente para portfólio, <b>nosso "banco de dados" será um arquivo .json</i></b>
+
 ## Tela - Home
 ![Tela home](https://github.com/ojotape05/Costs-Projeto-React/blob/master/costs/homecosts.png)
 
@@ -39,5 +41,3 @@ Os serviços são mostrados numa divisória a parte em cards, podem ser editados
 ![Tela Contato](https://github.com/ojotape05/Costs-Projeto-React/blob/master/costs/contato.png)
 
 A <b>Tela de Contato</b> é uma tela pra disponibilizar os meios de contato comigo.
-
-<i>obs.: Como é um projeto totalmente para portfólio, nosso "banco de dados" será um arquivo .json</i>
